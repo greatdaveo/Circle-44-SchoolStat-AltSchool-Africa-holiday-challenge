@@ -1,0 +1,129 @@
+/* google-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+*{
+  font-family: 'Ubuntu', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --blue-bell: #998FC7;
+  --lavendar-blue: #610F7F;
+  --faded-white: #F9F5FF;
+  --white: #ffffff;
+  --black: #000;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden ;
+}
+
+/* ---------------- side-navigation-menu-bar-------- */
+
+section{
+  position: relative; 
+  width: 100%;
+ 
+}
+#nav-container{
+  position: fixed;
+  width: 300px;
+  height: 100%;
+  background: var(--lavendar-blue);
+  border-left: 10px solid var(--blue-bell);
+  transition: 0.5s;
+  overflow: hidden;
+}
+#nav-container ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#nav-container ul li {
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius:30px;
+  border-bottom-left-radius:30px;
+}
+#nav-container ul li:hover{
+  background: white;
+}
+
+#nav-container ul li:nth-child(1){
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+
+#nav-container ul li a{
+  position: relative;
+  width: 100%;
+  display: flex;
+  text-decoration: none;
+  color: white;
+}
+
+#nav-container ul li:hover a{
+  color: var(--blue-bell);
+}
+
+#nav-container ul li a .logo{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+
+#nav-container ul li a .logo i{
+  font-size: 1.75rem;
+  padding-top: 20px;
+  
+}
+
+#nav-container ul li a .brandName{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+
+/* ----------curve outside------ */
+#nav-container ul li:hover a::before{
+  content: '';
+  position: absolute;
+  right:0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+#nav-container ul li:hover a::after{
+  content: "";
+  position: absolute;
+  right:0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
+}
+
+
+
+  
