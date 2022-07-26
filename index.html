@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
   <!-- ================ Navigation =============== -->
   <section>
     <nav id="nav-container">
@@ -36,7 +35,7 @@
           <a href="#">
             <span class="logo"><i class="fa fa-laptop" aria-hidden="true"></i>
             </span>
-            <span class="brandName">FrontendStudents</span>
+            <span class="brandName">Frontend Students</span>
           </a>
         </li>
         <li>
@@ -64,290 +63,321 @@
   </section>
 
   <!-- ============= Search Bar ============= -->
-  <header>
-    <div class="topbar">
-      <div class="toggle">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-      </div>
-
-      <div class="search">
-        <label>
-          <input type="text" placeholder="Search here">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </label>
-      </div>
-      <!-- ======== Is this necessary? ============ -->
-      <div class="user">
-        <img src="#User Image" alt="User Image">
-      </div>
-    </div>
-  </header>
-
-  <!-- ======= Top Navigation Bar ======= -->
-  <nav>
-    <div class="cardBox">
-      <div class="card">
-        <div>
-          <div class="numbers">3</div>
-          <div class="cardName">Instructors</div>
+  <div class="main">
+    <header>
+      <div class="topbar">
+        <div class="toggle">
+          <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
 
-        <div class="card-icon">
-          <i class="fa fa-eye" aria-hidden="true"></i>
+        <div class="search">
+          <label>
+            <input type="text" placeholder="Search here">
+            <i class="fa fa-search" aria-hidden="true" id="search"></i>
+          </label>
+        </div>
+        <!-- ======== Is this necessary?() ============ -->
+        <div class="user">
+          <img src="Images/sampleimg.jpeg" alt="User Image">
+        </div>
+      </div>
+    </header>
+
+
+
+    <!-- ======= CARDS ======= -->
+    <nav>
+      <div class="cardBox">
+        <div class="card">
+          <div>
+            <div class="numbers">3</div>
+            <div class="cardName">Instructors</div>
+          </div>
+
+          <div class="card-icon">
+            <i class="fa fa-eye" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="numbers">100</div>
+            <div class="cardName">Frontend Students</div>
+          </div>
+
+          <div class="card-icon">
+            <i class="fa fa-users" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="numbers">150</div>
+            <div class="cardName">Backend Students</div>
+          </div>
+
+          <div class="card-icon">
+            <i class="fa fa-users" aria-hidden="true"></i>
+          </div>
+        </div>
+
+        <div class="card">
+          <div>
+            <div class="numbers">200</div>
+            <div class="cardName">Cloud Computing Students</div>
+          </div>
+
+          <div class="card-icon">
+            <i class="fa fa-users" aria-hidden="true"></i>
+          </div>
         </div>
       </div>
 
-      <div class="card">
-        <div>
-          <div class="numbers">100</div>
-          <div class="cardName">Frontend Students</div>
+    </nav>
+
+    <!-- =============== List of Student Details ============== -->
+    <article>
+        <div class="details">
+          <div class="Student-Details">
+            <h2>Students Information</h2>
+            <a href="#" class="btn">View Information</a>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <td>Name</td>
+                <td>Track</td>
+                <td>Students I.D</td>
+                <td>Gender</td>
+                <td>Age</td>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>David Olowomeye</td>
+                <td>Frontend</td>
+                <td>Alt/.../...</td>
+                <td>Male</td>
+                <td>27</td>
+              </tr>
+
+              <tr>
+                <td>Temiloluwa Adegoke</td>
+                <td>Frontend</td>
+                <td>Alt/.../...</td>
+                <td>Female</td>
+                <td>29</td>
+              </tr>
+
+              <tr>
+                <td>Ojo Taiwo</td>
+                <td>Frontend</td>
+                <td>Alt/.../...</td>
+                <td>Male</td>
+                <td>38</td>
+              </tr>
+
+              <tr>
+                <td>Oke Kuburat</td>
+                <td>Frontend</td>
+                <td>Alt/.../...</td>
+                <td>Female</td>
+                <td>27</td>
+              </tr>
+
+              <tr>
+                <td>Emediong Udofia</td>
+                <td>Frontend</td>
+                <td>Alt/.../...</td>
+                <td>Male</td>
+                <td>30</td>
+              </tr>
+
+              <tr>
+                <td>Faridah Mustapha</td>
+                <td>Frontend</td>
+               <td>Alt/.../...</td>
+                <td>Female</td>
+                <td>31</td>
+              </tr>
+
+              <tr>
+                <td>Chukwuebuka nwokike</td>
+                <td>Frontend</td>
+                <td>Alt/.../...</td>
+                <td>Male</td>
+                <td>21</td>
+              </tr>
+
+              <tr>
+                <td>Ajifolokun Olaoluwa</td>
+                <td>Frontend</td>
+                <td>Alt/.../...</td>
+                <td>Male</td>
+                <td>27</td>
+              </tr>
+
+              <tr>
+                <td>Osemudiamen Omoigberale</td>
+                <td>Frontend</td>
+                <td>Alt/.../...</td>
+                <td>Female</td>
+                <td>28</td>
+              </tr>
+
+              <tr>
+                <td>Olagunju Oluwakolade</td>
+                <td>Frontend</td>
+                <td>Alt/.../...</td>
+                <td>Male</td>
+                <td>31</td>
+              </tr>
+
+            </tbody>
+          </table>
         </div>
 
-        <div class="card-icon">
-          <i class="fa fa-users" aria-hidden="true"></i>
+
+      <!-- ================= Managemt Details ================ -->
+      <aside>
+        <div class="Mgt-Names">
+          <h2>Management Information</h2>
+        </div>
+
+        <table>
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/Adewale Yusuf.jpg" alt="Adewale Yusuf"></div>
+        </td>
+            <td>
+              <h4>Adewale Yusuf <br> <span>CEO & Founder</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/hacksultan.jpeg" alt="Hacksultan"></div>
+            </td>
+            <td>
+              <h4>Akintunde Sultan <br> <span>Co-Founder</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/Opeyemi Awoyemi.jpg" alt="Opeyemi Awoyemi"></div>
+            </td>
+            <td>
+              <h4>Opeyemi Awoyemi <br> <span>Co-Founder</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/Rachael onoja .jpg" alt="Rachael"></div>
+            </td>
+            <td>
+              <h4>Rachael Onoja <br> <span>Director of Learning</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/Jerry uke .jpg" alt="Jerry"></div>
+            </td>
+            <td>
+              <h4>Jerry Uke <br> <span>Program Coordinator</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/Tabitha kavyu .JPEG" alt="Tabitha"></div>
+            </td>
+            <td>
+              <h4>Tabitha Kavyu<br> <span>Community Manager</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/Rukevwa Onuwa.jpg" alt="Rukevwe"></div>
+            </td>
+            <td>
+              <h4>Rukevwe Onuwa <br> <span>Program Associate</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/Adedeji Oshinojo.jpg" alt="Deji"></div>
+            </td>
+            <td>
+              <h4>Ayodeji Oshinojo <br> <span>Program Associate</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/Rising .jpg" alt="Deji"></div>
+            </td>
+            <td>
+              <h4>Name of HTML Tutor<br> <span>HTML Tutor</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/Rising .jpg" alt="Rising"></div>
+            </td>
+            <td>
+              <h4>Rising Odegua <br> <span>Javascript Tutor</span></h4>
+            </td>
+          </tr>
+
+          <tr>
+            <td width="60px">
+              <div class="Mgt-image"><img src="/Images/setemi.jpg" alt="Deji"></div>
+            </td>
+            <td>
+              <h4>Oluwasetemi Ojo <br> <span>General Tutor</span></h4>
+            </td>
+          </tr>
+
+        </table>
+      </aside>
+      <div class="whole">
+      <!-- ================= Average Age ================ -->
+        <div class="age">
+          <table>
+            <tbody>
+              <tr>
+                <td>minimum Age</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <td>maximum Age</td>
+                <td>60</td>
+              </tr>
+              <tr>
+                <td>Average Age</td>
+                <td>28</td>
+              </tr>
+
+          </table>
+        </div>
+<!--    ========= tracks percentage ============ -->
+        <div class="tracks" >
+          <div class="pie animate" style="--p:22;--c:rgb(187, 7, 7);"> <h4>frontend 100(22%)</h4></div>
+<div class="pie animate" style="--p:33;--c:orange;"> <h4>backEnd 150(33%)</h4></div>
+<div class="pie animate" style="--p:45;--c:var(--green)"><h4> Cloud 200(45%)</h4></div>
         </div>
       </div>
-
-      <div class="card">
-        <div>
-          <div class="numbers">150</div>
-          <div class="cardName">Backend Students</div>
-        </div>
-
-        <div class="card-icon">
-          <i class="fa fa-users" aria-hidden="true"></i>
-        </div>
       </div>
-
-      <div class="card">
-        <div>
-          <div class="numbers">200</div>
-          <div class="cardName">Cloud Computing Students</div>
-        </div>
-
-        <div class="card-icon">
-          <i class="fa fa-users" aria-hidden="true"></i>
-        </div>
-      </div>
-    </div>
-
-  </nav>
-
-  <!-- =============== List of Student Details ============== -->
-  <article>
-    <div class="Details">
-      <div class="Student-Details">
-        <h2>Students Information</h2>
-        <a href="#" class="btn">View Information</a>
-      </div>
-
-      <table>
-        <thead>
-          <tr>
-            <td>Name</td>
-            <td>Track</td>
-            <td>Students I.D</td>
-            <td>Gender</td>
-            <td>Age</td>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>David Olowomeye</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Male</td>
-            <td>27</td>
-          </tr>
-
-          <tr>
-            <td>Temiloluwa Adegoke</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Female</td>
-            <td>29</td>
-          </tr>
-
-          <tr>
-            <td>Ojo Taiwo</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Male</td>
-            <td>38</td>
-          </tr>
-
-          <tr>
-            <td>Oke Kuburat</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Female</td>
-            <td>27</td>
-          </tr>
-
-          <tr>
-            <td>Emediong Udofia</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Male</td>
-            <td>30</td>
-          </tr>
-
-          <tr>
-            <td>Faridah Mustapha</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Female</td>
-            <td>31</td>
-          </tr>
-
-          <tr>
-            <td>Chukwuebuka nwokike</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Male</td>
-            <td>31</td>
-          </tr>
-
-          <tr>
-            <td>Ajifolokun Olaoluwa</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Male</td>
-            <td>27</td>
-          </tr>
-
-          <tr>
-            <td>Osemudiamen Omoigberale</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Female</td>
-            <td>28</td>
-          </tr>
-
-          <tr>
-            <td>Olagunju Oluwakolade</td>
-            <td>Frontend</td>
-            <td>Alt/.../...</td>
-            <td>Male</td>
-            <td>31</td>
-          </tr>
-
-        </tbody>
-      </table>
-    </div>
-
-
-    <!-- ================= Managemt Details ================ -->
-    <aside>
-      <div class="Mgt-Names">
-        <h2>Management Information</h2>
-      </div>
-
-      <table>
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Adewale Yusuf.jpg" alt="Adewale Yusuf"></div>
-          </td>
-          <td>
-            <h4>Adewale Yusuf <br> <span>CEO & Founder</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Adewale Yusuf.jpg" alt="Hacksultan"></div>
-          </td>
-          <td>
-            <h4>Akintunde Sultan <br> <span>Co-Founder</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Opeyemi Awoyemi.jpg" alt="Opeyemi Awoyemi"></div>
-          </td>
-          <td>
-            <h4>Opeyemi Awoyemi <br> <span>Co-Founder</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Rachael onoja .jpg" alt="Rachael"></div>
-          </td>
-          <td>
-            <h4>Rachael Onoja <br> <span>Director of Learning</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Jerry uke .jpg" alt="Jerry"></div>
-          </td>
-          <td>
-            <h4>Jerry Uke <br> <span>Program Coordinator</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Tabitha kavyu .JPEG" alt="Tabitha"></div>
-          </td>
-          <td>
-            <h4>Tabitha Kavyu<br> <span>Community Manager</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Rukevwa Onuwa.jpg" alt="Rukevwe"></div>
-          </td>
-          <td>
-            <h4>Rukevwe Onuwa <br> <span>Program Associate</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Adedeji Oshinojo.jpg" alt="Deji"></div>
-          </td>
-          <td>
-            <h4>Ayodeji Oshinojo <br> <span>Program Associate</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Rising .jpg" alt="Deji"></div>
-          </td>
-          <td>
-            <h4>Name of HTML Tutor<br> <span>HTML Tutor</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Rising .jpg" alt="Rising"></div>
-          </td>
-          <td>
-            <h4>Rising Odegua <br> <span>Javascript Tutor</span></h4>
-          </td>
-        </tr>
-
-        <tr>
-          <td width="60px">
-            <div class="Mgt-image"><img src="/Images/Rising .jpg" alt="Deji"></div>
-          </td>
-          <td>
-            <h4>Oluwasetemi Ojo <br> <span>General Tutor</span></h4>
-          </td>
-        </tr>
-
-      </table>
-    </aside>
-
-  </article>
+    </article>
+  </div>
 
 
 
@@ -358,6 +388,10 @@
 
 
 
+
+
+  <!-- ===========javascript =============== -->
+  <script src="index.js"></script>
   <!-- // ============= EEND DO NOT EDIT ============== // -->
   <script src="index.mjs" type="module"></script>
   <!-- // ============= EEND DO NOT EDIT ============== // -->

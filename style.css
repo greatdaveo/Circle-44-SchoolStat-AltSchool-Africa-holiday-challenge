@@ -10,16 +10,21 @@
 
 :root{
   --blue-bell: #998FC7;
+  --lavendar-web: #E5E6FD;
   --lavendar-blue: #610F7F;
   --faded-white: #F9F5FF;
   --white: #ffffff;
   --black: #000;
+  --green: #0fca0fef;
+ --yellow:#ffff00b2;
 }
 
 body {
+  position: relative;
   min-height: 100vh;
-  overflow-x: hidden ;
-}
+  overflow-x: hidden;
+  width: 100%;
+ }
 
 /* ---------------- side-navigation-menu-bar-------- */
 
@@ -37,11 +42,19 @@ section{
   transition: 0.5s;
   overflow: hidden;
 }
+#nav-container.active{
+  width: 80px;
+}
+
 #nav-container ul{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+}
+
+#nav-container.active{
+  width: 80px;
 }
 
 #nav-container ul li {
@@ -51,7 +64,8 @@ section{
   border-top-left-radius:30px;
   border-bottom-left-radius:30px;
 }
-#nav-container ul li:hover{
+#nav-container ul li:hover,
+#nav-container ul li.hovered {
   background: white;
 }
 
@@ -68,7 +82,8 @@ section{
   color: white;
 }
 
-#nav-container ul li:hover a{
+#nav-container ul li:hover a,
+#nav-container ul li.hovered a {
   color: var(--blue-bell);
 }
 
@@ -94,12 +109,14 @@ section{
   height: 60px;
   line-height: 60px;
   text-align: start;
+
   white-space: nowrap;
 }
 
 
 /* ----------curve outside------ */
-#nav-container ul li:hover a::before{
+#nav-container ul li:hover a::before,
+#nav-container ul li.hovered a::before {
   content: '';
   position: absolute;
   right:0;
@@ -107,11 +124,13 @@ section{
   width: 50px;
   height: 50px;
   background-color: transparent;
+
   border-radius: 50%;
   box-shadow: 35px 35px 0 10px var(--white);
   pointer-events: none;
 }
-#nav-container ul li:hover a::after{
+#nav-container ul li:hover a::after, 
+#nav-container ul li.hovered a::after{
   content: "";
   position: absolute;
   right:0;
@@ -124,6 +143,404 @@ section{
   pointer-events: none;
 }
 
+/* Oyinda???  */
+
+ .main{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--lavendar-web);
+  transition: 0.3s;
+}
+
+.main.active{
+  width: calc(100% - 80px);
+  left: 80px;
+}
+
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.toggle{
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.search{
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+
+}
+
+.search label{
+  position: relative;
+  width: 100%;
+}
+
+.search label input{
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  padding: 0 25px;
+  outline: none;
+  border: 1px solid black;
+}
+
+#search{
+  position: absolute;
+  top: 3px ;
+  left: 10px;
+}
+
+.user{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid black;
+
+}
+
+.user img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+}
 
 
+/* CARDS */
+
+.cardBox {
+  position: relative;
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.cardBox .card {
+  position: relative;
+  background: var(--white);
+  padding: 30px 30px 10px 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+ .cardBox .card .numbers {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--blue-bell);
+} 
+
+.cardBox .card .cardName {
+  font-size: .75rem;
+  margin-top: 10px;
+}
+
+.cardBox .card .card-icon{
+  font-size: 2rem;
+}
+
+.cardBox .card:hover {
+  background: var(--lavendar-blue);
+  color: var(--white);
+}
+
+
+/* ======== article Tag styling ======== */
+
+article {
+  position: relative;
+ width: 100%;
+ padding: 20px;
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ grid-gap: 30px;
+ background: var(--lavendar-web); 
+}
+
+article table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;  
+ }
+
+article table thead td{
+  font-weight: 600;
+ }
+/* student details */
+.details {
+  position: relative;
+  display: grid;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+
+/* aside tag(management details section) */
+aside{
+   position: relative;
+  display: grid;
+  min-height: 500px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+}
+/* .Mgt-Names {
+  display: flex; 
+     align-items: flex-start;
+}
+
+.Mgt-Names h2{
+   font-weight: 600;
+   color: var(--blue-bell); }*/
   
+aside .Mgt-image{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+aside .Mgt-image img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+
+aside table tr td{
+ padding: 12px 10px;
+  
+}
+
+aside table tr td h4{
+ font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2rem;
+ }
+
+aside table tr td h4 span{
+  font-size: 14px;
+  color: var(--blue-bell);
+} 
+
+aside table tr:hover {
+  background:var(--lavendar-blue);
+  color: var(--white);
+}
+
+aside table tr:hover td h4 span{
+  color: var(--white);
+}
+
+article .whole{
+  position: relative;
+ width: 100%;
+ min-height: 100px;
+ /* padding: 20px; */
+ display: grid;
+ grid-template-rows: repeat(2, .35fr);
+ grid-gap: 30px;
+  }
+
+article .whole table tr{
+   color: var(--black);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+article .whole table tr:last-child{
+   border-bottom: none;
+  }
+
+article .whole table tr td{
+   padding: 10px;
+  }
+
+article .whole .age table tr td:last-child{
+   text-align: end;
+   position: relative;
+   padding: 5px 10px;
+   background: var(--green);
+   border-radius: 10px;
+   text-decoration:none;
+   color: var(--white);
+  }
+
+article  .whole .age {
+   position: relative;
+   background: var(--white);
+   padding: 30px;
+   border-radius: 20px;
+   display: flex;
+   justify-content: space-between;
+   cursor: pointer;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+
+
+article .whole .age table tbody {
+   font-weight: 600;
+  }
+/* tracks */
+article .whole .tracks {
+   position: relative;
+   background: var(--white);
+   padding: 30px;
+   border-radius: 20px;
+   display: grid;
+  place-content: center;
+   grid-template-rows: repeat(3, 1fr);
+   cursor: pointer;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  }
+ /* pie chart for tracks */
+
+  @property --p{
+   syntax: '<number>';
+   inherits: true;
+   initial-value: 0;
+ }
+ 
+ .pie {
+   --p:20;
+   --b:16px;
+   --c:darkred;
+   --w:90px;
+   
+   width:var(--w);
+   aspect-ratio:1;
+   position:relative;
+   display:inline-grid;
+   margin:5px;
+      place-content:center;
+   font-size:15px;
+   font-weight:bold;
+   font-family:'ubuntu', sans-serif;
+ }
+ .pie:before,
+ .pie:after {
+   content:"";
+   position:absolute;
+   border-radius:50%;
+   
+ }
+ .pie:before {
+   inset:0;
+   background:
+     radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+     conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+   -webkit-mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+           mask:radial-gradient(farthest-side,#0000 calc(99% - var(--b)),#000 calc(100% - var(--b)));
+ }
+ .pie:after {
+   inset:calc(50% - var(--b)/2);
+   background:var(--c);
+   transform:rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - var(--w)/2));
+ }
+ .animate {
+   animation:p 1s .5s both;
+ }
+ .no-round:before {
+   background-size:0 0,auto;
+ }
+ .no-round:after {
+   content:none;
+ }
+ @keyframes p {
+   from{--p:0}
+ }
+ 
+ body {
+   background:#ddd;
+ }
+ /* end of chart */
+
+
+
+
+
+
+/* ========= responsiveness (media Queries) ======== */
+@media(max-width:991px){
+  #nav-container {
+    left: -300px;
+  }
+  #nav-container.active{
+     width:300px ;
+    left: 0;
+  }
+  .main{
+    width: 100%;
+    left:0;
+   }
+  .main.active{
+    left: 300px;
+  }
+  .cardBox{
+    grid-template-columns:repeat(2, 1fr) ;
+  }
+}
+
+@media(max-width: 768px) {
+  article{
+    grid-template-columns: 1fr;
+  }
+  .details{overflow-x: auto;    
+  }
+}
+
+@media (max-width:480px) {
+  .cardBox{
+    grid-template-columns:repeat(1, 1fr) ;
+  }
+  .cardHeader h2{
+    font-size: 20px;
+  }
+  .user{
+    min-width: 40px;
+  }
+  #nav-container{
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  #nav-container.active{
+    width: 100%;
+    left: 0;
+  }
+  .toggle{
+    z-index: 10001;
+  }
+    }
+ 
