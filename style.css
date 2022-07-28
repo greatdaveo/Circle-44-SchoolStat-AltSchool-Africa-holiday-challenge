@@ -1,9 +1,9 @@
-/* google-fonts */
+/*google-fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 *{
   font-family: 'Ubuntu', sans-serif;
-  margin: 0;
+  margin:0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -32,6 +32,9 @@ section{
   position: relative; 
   width: 100%;
  
+}
+table.border td{
+  padding: 10px;
 }
 #nav-container{
   position: fixed;
@@ -270,6 +273,23 @@ section{
   color: var(--white);
 }
 
+.newStud-Details{
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+}
+
+.newStud-Details table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;  
+ }
+
+.newStud-Details table thead td{
+  font-weight: 600;
+ }
+
 
 /* ======== article Tag styling ======== */
 
@@ -278,7 +298,7 @@ article {
  width: 100%;
  padding: 20px;
  display: grid;
- grid-template-columns: repeat(3, 1fr);
+ grid-template-columns: repeat(2, 1fr);
  grid-gap: 30px;
  background: var(--lavendar-web); 
 }
@@ -287,8 +307,8 @@ article table{
   width: 100%;
   border-collapse: collapse;
   margin-top: 10px;  
- }
-
+}
+}
 article table thead td{
   font-weight: 600;
  }
@@ -300,18 +320,26 @@ article table thead td{
   padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+  overflow-x: auto;
 }
 
 /* aside tag(management details section) */
 aside{
    position: relative;
   display: grid;
-  min-height: 500px;
+  height: 700px;
   background: var(--white);
   padding: 20px;
   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+  overflow-y: auto;
 }
+
+aside::-webkit-scrollbar {
+  display: none;
+}
+
+
 /* .Mgt-Names {
   display: flex; 
      align-items: flex-start;
@@ -350,7 +378,7 @@ aside table tr td h4{
   line-height: 1.2rem;
  }
 
-aside table tr td h4 span{
+aside table  tr td h4 span{
   font-size: 14px;
   color: var(--blue-bell);
 } 
@@ -367,10 +395,10 @@ aside table tr:hover td h4 span{
 article .whole{
   position: relative;
  width: 100%;
- min-height: 100px;
+ height: 700px;
  /* padding: 20px; */
  display: grid;
- grid-template-rows: repeat(2, .35fr);
+ grid-template-rows: repeat(2, 1fr);
  grid-gap: 30px;
   }
 
@@ -413,17 +441,84 @@ article .whole .age table tbody {
    font-weight: 600;
   }
 /* tracks */
-article .whole .tracks {
+/* article .whole .tracks {
    position: relative;
    background: var(--white);
    padding: 30px;
    border-radius: 20px;
    display: grid;
-  place-content: center;
+   place-content: center;
+   height: 350px;
+   overflow: auto;
    grid-template-rows: repeat(3, 1fr);
    cursor: pointer;
    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+  } */
+
+article .whole .genders {
+   position: relative;
+   background: var(--white);
+   padding: 30px;
+   border-radius: 20px;
+   display: grid;
+   grid-template-rows: repeat(2, 1fr);
+   cursor: pointer;
+   box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
   }
+
+.genders .first {
+  position: relative;
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+}
+
+.genders .second {
+  position: relative;
+  width: 100%;
+  padding: 20px 20px 10px 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.genders .Box{
+   position: relative;
+  background: var(--white);
+  padding: 30px 30px 10px 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.genders .nBox{
+  position: relative;
+  background: var(--white);
+  padding: 30px 30px 10px 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.genders .nums{
+   position: relative;
+  font-weight: 500;
+  font-size: 2.5rem;
+  color: var(--blue-bell);
+}
+
+.genders .Name{
+  font-size: .75rem;
+  margin-top: 10px;
+}
+
+.genders .cardicon{
+   font-size: 3.5rem;
+}
+
  /* pie chart for tracks */
 
   @property --p{
@@ -511,20 +606,45 @@ article .whole .tracks {
     grid-template-columns:repeat(2, 1fr) ;
   }
 }
+a{
+  color: var(--blue-bell);
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+  color: var(--black)
+}
 
 @media(max-width: 768px) {
-  article{
+  article {
     grid-template-columns: 1fr;
+  }
+  .whole .genders .Box{
+    grid-template-columns: 1fr;
+  }
+  .newStud-Details, .whole, aside{
+    overflow-x: auto;
   }
   .details{overflow-x: auto;    
   }
 }
-
+table.border tbody td:hover{
+  background: var(--blue-bell);
+}
+table.border thead td:hover:hover{
+  background: var(--lavendar-blue);
+  color:white;
+  font-family: monospace;
+} 
+table.border td{
+  border:1px solid var(--lavendar-blue);
+  
+}
 @media (max-width:480px) {
   .cardBox{
     grid-template-columns:repeat(1, 1fr) ;
   }
-  .cardHeader h2{
+  .cardHeader h3{
     font-size: 20px;
   }
   .user{
@@ -542,5 +662,5 @@ article .whole .tracks {
   .toggle{
     z-index: 10001;
   }
-    }
- 
+
+}
