@@ -33,7 +33,7 @@ section{
   width: 100%;
  
 }
-table.border td{
+table.border td, table.border th{
   padding: 10px;
 }
 #nav-container{
@@ -286,9 +286,32 @@ table.border td{
   margin-top: 10px;  
  }
 
-.newStud-Details table thead td{
+.newStud-Details table thead th{
   font-weight: 600;
  }
+
+ .border th {
+  cursor: pointer;
+  
+}
+
+.border .th-sort-asc::after {
+  content: "\25b4";
+}
+
+.border .th-sort-desc::after {
+  content: "\25be";
+}
+
+.border .th-sort-asc::after,
+.border .th-sort-desc::after {
+  margin-left: 5px;
+}
+
+.border .th-sort-asc,
+.border .th-sort-desc {
+  background: var(--lavendar-blue);
+}
 
 
 /* ======== article Tag styling ======== */
@@ -634,13 +657,13 @@ table.border tbody td:hover{
   background: var(--blue-bell);
 }
   
-table.border thead td:hover:hover{
+table.border thead th:hover:hover{
   background: var(--lavendar-blue);
   color:white;
   font-family: monospace;
 } 
   
-table.border td{
+table.border th, table.border td{
   border:1px solid var(--lavendar-blue);
   
 }
