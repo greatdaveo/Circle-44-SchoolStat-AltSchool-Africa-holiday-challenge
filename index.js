@@ -66,3 +66,5 @@ table.querySelector(`th:nth-child(${ column + 1})`).classList.toggle("th-sort-de
       sortTableByColumn(tableElement, headerIndex, !currentIsAscending);
   });
 });
+
+

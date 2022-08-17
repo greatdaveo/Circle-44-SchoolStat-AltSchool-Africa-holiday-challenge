@@ -638,6 +638,18 @@ a:hover{
   color: var(--black)
 }
 
+table.border tbody td:hover{
+  background: var(--blue-bell);
+}
+  
+table.border thead th:hover:hover{
+  background: var(--lavendar-blue);
+  color:white;
+  font-family: monospace;
+  border-radius: 10px;
+} 
+
+
 @media(max-width: 768px) {
   article {
     grid-template-columns: 1fr;
@@ -661,6 +673,7 @@ table.border thead th:hover:hover{
   background: var(--lavendar-blue);
   color:white;
   font-family: monospace;
+  border-radius: 8px;
 } 
   
 table.border th, table.border td{
